@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caos Confortável</title>
+
+    <style>
+        body {
+            background-color: #111;
+            color: #f5f5f5;
+            font-family: Georgia, "Times New Roman", serif;
+
+            display: flex;
+            justify-content: center;
+
+            margin: 0;
+            padding: 60px 15px; /* melhor no celular */
+        }
+
+        .texto {
+            max-width: 700px;
+            width: 100%;
+            line-height: 1.8;
+            font-size: 16px; /* melhor leitura mobile */
+        }
+
+        /* em telas maiores volta o tamanho */
+        @media (min-width: 768px) {
+            .texto {
+                font-size: 18px;
+            }
+        }
+
+        /* animação base */
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* parágrafos normais */
+        .texto p:not(.final) {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecer 3s ease forwards;
+        }
+
+        /* delays */
+        .texto p:nth-child(1) { animation-delay: 1s; }
+        .texto p:nth-child(2) { animation-delay: 11s; }
+        .texto p:nth-child(3) { animation-delay: 22s; }
+        .texto p:nth-child(4) { animation-delay: 30s; }
+        .texto p:nth-child(5) { animation-delay: 37s; }
+
+        /* TEXTO FINAL */
+        .final {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecer 3s ease forwards;
+            animation-delay: 45s;
+        }
+
+        /* IMAGEM */
+        .imagem {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto 0;
+            border-radius: 10px;
+
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecer 4s ease forwards;
+            animation-delay: 50s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="texto">
+
+<p>
+Estou no meu quarto, no conforto da minha casa. Observo minha mesa e vejo o puro caos: formulário que eu deveria ter preenchido, meu documento que já deveria ter guardado, post-its jogados que eu deveria colocar na mochila.
+</p>
+
+<p>
+Vejo a caixa de som, que me faz lembrar que preciso deixá-la carregando. Uma caneta e um lápis vermelho — me questiono quando foi a última vez que usei. Um porta-copo que eu nunca uso, e uma simples embalagem circular de metal, útil e agradável.
+</p>
+
+<p>
+O roteador — ainda bem que troquei meu provedor de internet. Meus cadernos todos espalhados, minha antiga carteira de trabalho azul... hoje esquecida, engolida pelo digital
+</p>
+
+<p>
+A iluminação bate forte na minha janela. Vejo também os monitores,suporte,mouse, teclado e controle.
+</p>
+
+<p>
+Engraçado… que no meio desse caos todo, eu me sinto confortável.
+</p>
+
+<p class="final">
+Meu Espaço, minha mesa?
+</p>
+
+<img src="aaa.jpg" class="imagem">
+
+</div>
+
+</body>
+</html>
